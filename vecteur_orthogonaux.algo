@@ -1,0 +1,56 @@
+
+
+PROCEDURE dot_product(tab1, tab2: ARRAY_OF float[20], var Ps: integer)
+VAR
+    i : integer;
+BEGIN
+    
+if (tab1.lenght== tab2.lenght)
+then
+{
+    Ps=0;
+
+for(i=0;i<tab1.lenght;i++)
+{
+
+    Ps= Ps + tab1[i]* tab2[i];
+}
+
+
+
+END
+
+ALGORITHM Orthogonaux
+
+paire_vecteur : STRUCT
+                x : ARRAY_OF float[20];
+                y :ARRAY_OF float[20];
+            END_STRUCT
+    arr : ARRAY_OF Point[10];
+vecteur : ARRAY_OF of paire_vecteur [30];
+n,j,result : integer;
+
+    
+BEGIN
+write ("donner le nombre de paire de vecteur\n);
+read (n);
+for (j=0;j<=n,j++)
+
+{
+lecture (vecteur[j]);
+if vecteur[j].x.length == vecteur[j].y.lenght
+{
+    dot_product(vecteur[j].x, vecteur[j].y,  result)
+    if result ==0
+    {
+    write ("le paire de vecteur n",j,"sont orthogonaux")
+    }
+    else 
+    {
+        write ("le paire de vecteur n",j,"ne sont orthogonaux")
+    }
+
+}
+
+}
+
